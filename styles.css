@@ -22,3 +22,10 @@ main img {
 h1, h2 {
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
