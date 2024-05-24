@@ -14,13 +14,52 @@ ul li {
     padding-left:20px;
 }
 
+ul.features {
+    display: block;
+    list-style: none;
+    width: 50%;
+}
+
+ul.features li {
+    text-align: center;
+}
+
+
+td.null {
+   border: none; 
+}
+
 main img {
     display:block;
     margin:auto;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
+}
+
+div.statsAndFeatures {
+    display:flex;
+    width: 100%;
+}
+
+table {
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th.title {
+    font-size: x-large;
+    border:none;
+}
+
+li.title {
+    font-size: x-large;
+    border: none;
 }
 
 @media only screen and (max-width: 600px) {
