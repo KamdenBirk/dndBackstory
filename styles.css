@@ -24,6 +24,9 @@ ul.features li {
     text-align: center;
 }
 
+table.stats {
+    width:50%;
+}
 
 td.null {
    border: none; 
@@ -43,10 +46,6 @@ div.statsAndFeatures {
     width: 100%;
 }
 
-table {
-    width: 50%;
-}
-
 td, th {
     border: 1px solid black;
     text-align: center;
@@ -60,6 +59,15 @@ th.title {
 li.title {
     font-size: x-large;
     border: none;
+}
+
+.flex {
+    display:flex;
+}
+
+.spells {
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 600px) {
