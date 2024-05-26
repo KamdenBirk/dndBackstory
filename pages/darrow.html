@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darrow*</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="../javascript/darrow.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,12 +29,12 @@
             <table class="stats">
                 <tr><td class="null"></td><th class="title">Stats</th><td class="null"></td></tr>
                 <tr><th>Ability</th><th>Score</th><th>Modifier</th></tr>
-                <tr><td>Strength</td><td></td><td></td></tr>
-                <tr><td>Dexterity</td><td></td><td></td></tr>
-                <tr><td>Constitution</td><td></td><td></td></tr>
-                <tr><td>Intelligence</td><td></td><td></td></tr>
-                <tr><td>Wisdom</td><td></td><td></td></tr>
-                <tr><td>Charisma</td><td></td><td></td></tr>
+                <tr><td>Strength</td><td>10</td><td>0</td></tr>
+                <tr><td>Dexterity</td><td>14</td><td>+2</td></tr>
+                <tr><td>Constitution</td><td>13</td><td>+1</td></tr>
+                <tr><td>Intelligence</td><td>15</td><td>+2</td></tr>
+                <tr><td>Wisdom</td><td>12</td><td>+1</td></tr>
+                <tr><td>Charisma</td><td>8</td><td>-1</td></tr>
             </table>
             <ul class="features">
                 <li class="title"><strong>Features</strong></li>
@@ -41,17 +42,20 @@
             </ul>
         </div>
         <div class="spells">
-            <div class="flex">
+            <h2>Artificer Spells</h2>
                 <table class="cantrip">
                     <tr><td class="null"></td><th class="title">Cantrips</th><td class="null"></td></tr>
-                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td id="rayOfFrost">Ray of Frost</td><td>Cold</td><td>1d8</td></tr>
+                    <tr><td id="mending">Mending</td><td>None</td><td>0d0</td></tr>
                 </table>
                 <table class="levelOne">
                     <tr><td class="null"></td><th class="title">Level 1</th><td class="null"></td></tr>
-                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td id="grease">Grease</td><td>None</td><td>0d0</td></tr>
+                    <tr><td id="falseLife">False Life</td><td>Temp HP</td><td>1d4+4</td></tr>
+                    <tr><td id="absorbElements">Absorb Elements</td><td>Triggering Damage Type</td><td>1d6</td></tr>
+                    <tr><td id="magicMissile">Magic Missile</td><td>Force</td><td>1d4+1 (x3)</td></tr>
+                    <tr><td id="thunderwave">Thunderwave</td><td>Thunder</td><td>2d8</td></tr>
                 </table>
-            </div>
-            <div class="flex">
                 <table class="levelTwo">
                     <tr><td class="null"></td><th class="title">Level 2</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
@@ -60,8 +64,6 @@
                     <tr><td class="null"></td><th class="title">Level 3</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
                 </table>
-            </div>
-            <div class="flex">
                 <table class="levelFour">
                     <tr><td class="null"></td><th class="title">Level 4</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
@@ -70,8 +72,6 @@
                     <tr><td class="null"></td><th class="title">Level 5</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
                 </table>
-            </div>
-            <div class="flex">
                 <table class="levelSix">
                     <tr><td class="null"></td><th class="title">Level 6</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
@@ -80,7 +80,43 @@
                     <tr><td class="null"></td><th class="title">Level 7</th><td class="null"></td></tr>
                     <tr><td></td><td></td><td></td></tr>
                 </table>
-            </div>
+        </div>
+        <div class="blood spells">
+            <h2 class="blood">Blood Spells</h2>
+            <table class="blood cantrip">
+                <tr><td class="null"></td><th class="title">Cantrips</th><td class="null"></td></tr>
+                <tr><td id="bloodBoil">Blood Boil</td><td>Necrotic</td><td>1d4</td></tr>
+                <tr><td id="goreSpike">Gore Spike</td><td>Necrotic</td><td>1d10</td></tr>
+                <tr><td id="hemokinesis">Hemokinesis</td><td>None</td><td>0d0</td></tr>
+            </table>
+            <table class="blood levelOne">
+                <tr><td class="null"></td><th class="title">Level 1</th><td class="null"></td></tr>
+                <tr><td id="bloodReading">Blood Reading</td><td>None</td><td>0d0</td></tr>
+            </table>
+            <table class="blood levelTwo">
+                <tr><td class="null"></td><th class="title">Level 2</th><td class="null"></td></tr>
+                <tr><td id="infuseBlood">Infuse Blood</td><td>Temp HP/Force</td><td>3d6/2d6</td></tr>
+            </table>
+            <table class="blood levelThree">
+                <tr><td class="null"></td><th class="title">Level 3</th><td class="null"></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
+            <table class="blood levelFour">
+                <tr><td class="null"></td><th class="title">Level 4</th><td class="null"></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
+            <table class="blood levelFive">
+                <tr><td class="null"></td><th class="title">Level 5</th><td class="null"></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
+            <table class="blood levelSix">
+                <tr><td class="null"></td><th class="title">Level 6</th><td class="null"></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
+            <table class="blood levelSeven">
+                <tr><td class="null"></td><th class="title">Level 7</th><td class="null"></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
         </div>
         <p>Youngest son of Evendur and his wife Miri, Darrow has always been the odd one when it comes to his “trueblood” siblings. While Evendur II and Isobell quickly began obsessing over succession and business and societal connections Darrow instead focused on his hobby of tinkering with anything he could get his hands on. This hobby of his, along with his discovered arcane connection led Darrow to being taught personally by his Grandfather Sparrow von Greycastle, much to the dismay of Evendur II and Isobell. Under his tutelage Darrow quickly became an artificer and now works often with the engineering project under Sparrow's direction. His half brother Evendal is also under the tutelage of their grandfather, albeit his magical acuity is far more versatile than Darrow's. With succession upcoming, Darrow sought to avoid making enemies of his siblings by forming a neutral bloc, siblings who would support neither Evendur II or Isobel for successor to their father. Currently the only other member of this bloc is Evendal, who like Darrow himself doesn't want to pick a side. While unlike his other two full blooded siblings, Darrow isn't particularly well liked or hated by either the mercantile houses or the noble houses, instead he has a great amount of support from the workers and the old guard within the Greycastle house due to his connection to and work with Sparrow von Greycastle.</p>
         <h3>The Disappearance of Darrow Von Greycastle</h3>

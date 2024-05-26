@@ -28,10 +28,6 @@ table.stats {
     width:50%;
 }
 
-td.null {
-   border: none; 
-}
-
 main img {
     display:block;
     margin:auto;
@@ -68,6 +64,24 @@ li.title {
 .spells {
     display: flex;
     flex-direction: column;
+}
+
+div.blood {
+    background-color: black;
+}
+
+table.blood tr td, table.blood tr th, h2.blood {
+    background-color: black;
+    border:1px solid red;
+    color:red;
+}
+
+td.null {
+    border: none;
+}
+
+h2.blood, table.blood tr td.null, table.blood tr th.title {
+    border: none;
 }
 
 @media only screen and (max-width: 600px) {
