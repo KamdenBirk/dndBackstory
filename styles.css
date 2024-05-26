@@ -59,6 +59,11 @@ li.title {
 
 .flex {
     display:flex;
+    justify-content: center;
+}
+
+.flex * {
+    margin:10px;
 }
 
 .spells {
@@ -84,7 +89,7 @@ h2.blood, table.blood tr td.null, table.blood tr th.title {
     border: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     ul {
         flex-direction: column;
         text-align: center;
