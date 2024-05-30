@@ -44,6 +44,30 @@
                 <li id="researcher">Researcher</li>
             </ul>
         </div>
+        <h3 style="color:red;">Dice roller currently not functional</h3>
+        <div class="dice">
+            <select name="statUsed" id="statUsed">
+                <option value="None">None</option>
+                <option value="Strength">Strength</option>
+                <option value="Dexterity">Dexterity</option>
+                <option value="Constitution">Constitution</option>
+                <option value="Intelligence">Intelligence</option>
+                <option value="Wisdom">Wisdom</option>
+                <option value="Charisma">Charisma</option>
+            </select>
+            <select name="diceType" id="diceType">
+                <option value="d4">d4</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+                <option value="d20">d20</option>
+                <option value="d100">d100</option>
+            </select>
+            <p>Number of Dice Rolled:</p>
+            <input type="number" value="0" step="1" min="0" name="diceRolled" id="diceRolled">
+            <div id="diceTotal"></div>
+        </div>
         <div class="flex">
             <table class="health">
                 <tr><th>Max HP</th><td id="maxHP">15</td></tr>
